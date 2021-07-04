@@ -7,7 +7,7 @@ gan.compile(
     loss_fn=keras.losses.BinaryCrossentropy(),
 )
 
-gan.fit(
+r=gan.fit(
     dataset, epochs=epochs, callbacks=[GANMonitor(num_img=10, latent_dim=latent_dim)]
 )
 #Plot the evaluation results
