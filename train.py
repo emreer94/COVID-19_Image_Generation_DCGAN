@@ -11,8 +11,8 @@ r=gan.fit(
     dataset, epochs=epochs, callbacks=[GANMonitor(num_img=10, latent_dim=latent_dim)]
 )
 #Plot the evaluation results
-plt.plot(r.history['loss_fn'], label='d_loss')
-plt.plot(r.history['loss_fn'], label='g_loss')
+plt.plot(r.history['d_loss'], label='d_loss')
+plt.plot(r.history['g_loss'], label='g_loss')
 plt.legend()
 plt.show()
 plt.savefig('LossVal_loss')
